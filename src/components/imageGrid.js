@@ -1,8 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
-import { GridList, GridListTile, useMediaQuery } from '@material-ui/core';
-import { useTheme } from '@material-ui/styles';
+import { GridList, GridListTile } from '@material-ui/core';
 
 
 
@@ -32,12 +31,6 @@ const ImageGrid = () => {
     }
   `);
 
-    // Dynamically determine if mobile
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('xs'), {
-        defaultMatches: true
-    });
-
     const renderImages = () => {
         const images = edges.map(({ node }) => {
             const {
@@ -64,7 +57,7 @@ const ImageGrid = () => {
 
     return (
         <div >
-            <GridList cellHeight='auto' cols={ isMobile ? 2 : 3 } spacing={isMobile ? 2 : 10 } style={{ margin: isMobile ? '2px' : '15px' }}>
+            <GridList cellHeight='auto' cols={2} spacing={3} style={{ margin: '5px' }}>
                 {renderImages()}
             </GridList>
         </div>
