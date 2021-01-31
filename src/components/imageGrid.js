@@ -56,7 +56,7 @@ const ImageGrid = () => {
 
     return (
         <div >
-            <GridList cellHeight='auto' cols={3} spacing={10} style={{ margin: '30px'}}>
+            <GridList cellHeight='auto' cols={3} spacing={10} style={{ margin: '15px' }}>
                 {renderImages()}
             </GridList>
         </div>
