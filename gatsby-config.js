@@ -29,7 +29,7 @@ module.exports = {
       options: {
         username: "john.rocha5",
         instagram_id: "17841401642804110",
-        access_token: process.env.IG_ACCESS_TOKEN
+        access_token: process.env.GATSBY_IG_ACCESS_TOKEN
       },
     },
   ],
