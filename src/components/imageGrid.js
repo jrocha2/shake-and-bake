@@ -1,11 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+import { GridList, GridListTile, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/styles';
+
 
 
 const nodeURL = 'https://www.instagram.com/p';
+
 
 const ImageGrid = () => {
     const {
@@ -30,25 +32,31 @@ const ImageGrid = () => {
     }
   `);
 
+    // Dynamically determine if mobile
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('xs'), {
+        defaultMatches: true
+    });
+
     const renderImages = () => {
         const images = edges.map(({ node }) => {
-        const {
-            id,
-            caption,
-            localFile: { childImageSharp },
-        } = node;
+            const {
+                id,
+                caption,
+                localFile: { childImageSharp },
+            } = node;
 
-        return (
-            <GridListTile key={id} style={{ alignSelf:'center' }}>
-                <a target="_blank" rel="noreferrer" href={`${nodeURL}/${id}`} >
-                    <Img
-                    loading="lazy"
-                    alt={caption || ''}
-                    fluid={childImageSharp.fluid}
-                    />
-                </a>
-            </GridListTile>
-        );
+            return (
+                <GridListTile key={id} style={{ alignSelf:'center' }}>
+                    <a target="_blank" rel="noreferrer" href={`${nodeURL}/${id}`} >
+                        <Img
+                            loading="lazy"
+                            alt={caption || ''}
+                            fluid={childImageSharp.fluid}
+                        />
+                    </a>
+                </GridListTile>
+            );
         });
 
         return images;
@@ -56,7 +64,7 @@ const ImageGrid = () => {
 
     return (
         <div >
-            <GridList cellHeight='auto' cols={3} spacing={10} style={{ margin: '15px' }}>
+            <GridList cellHeight='auto' cols={ isMobile ? 2 : 3 } spacing={isMobile ? 2 : 10 } style={{ margin: isMobile ? '2px' : '15px' }}>
                 {renderImages()}
             </GridList>
         </div>
