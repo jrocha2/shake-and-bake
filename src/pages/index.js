@@ -1,6 +1,7 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import EmailIcon from '@material-ui/icons/Email';
 import ImageGrid from '../components/imageGrid';
@@ -18,6 +19,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ButtonAppBar() {
+
+  const siteData = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  );
+
   const classes = useStyles();
 
   return (
@@ -28,7 +42,7 @@ export default function ButtonAppBar() {
             <InstagramIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            John Bakes
+            {siteData.site.siteMetadata.title}
           </Typography>
           <IconButton edge="end" color="inherit" href="mailto:john.rocha5@gmail.com">
             <EmailIcon />
