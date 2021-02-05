@@ -49,7 +49,7 @@ const ImageGrid = () => {
                                 objectPosition: '50% 50%',
                                 width: '100%',
                                 height: '100%',
-                                maxHeight: '25rem'
+                                maxHeight: '30rem'
                             }}
                         />
                     </a>
@@ -63,7 +63,7 @@ const ImageGrid = () => {
 
     return (
         <div >
-            <GridList cellHeight='auto' cols={3} spacing={3} style={{ margin: '5px' }}>
+            <GridList cellHeight='auto' cols={2} spacing={5} style={{ margin: '10px' }}>
                 {renderImages()}
             </GridList>
         </div>

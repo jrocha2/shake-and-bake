@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "John Rocha",
+    title: "John Bakes",
   },
   plugins: [
     "gatsby-plugin-sharp",
@@ -12,7 +12,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: "Cut, Copy, Pastry",
+        icon: "static/images/icon.png",
       },
     },
     "gatsby-transformer-sharp",
@@ -20,7 +21,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./static/images/",
       },
       __key: "images",
     },
