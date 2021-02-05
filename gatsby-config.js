@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "John Bakes",
+    title: "John Rocha",
   },
   plugins: [
     "gatsby-plugin-sharp",
