@@ -1,48 +1,18 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  🍰 Cut Copy Pastry 🍰
 </h1>
+<h5 align="center">
+  cutcopypastry.com [![Netlify Status](https://api.netlify.com/api/v1/badges/e6faed3f-ef0f-4e28-90a1-f8ff5b3bce94/deploy-status)](https://app.netlify.com/sites/john-bakes/deploys)
+</h5>
 
-## 🚀 Quick start
+---
 
-1.  **Create a Gatsby site.**
+This is the source code for my personal baking and cooking website. To see it in the wild, go to [THE WEBSITE](https://cutcopypastry.com)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## The Source Code
+Since the website is mostly meant to serve static content (pictures or recipes), I thought I would try out a static site generator and the [Jamstack](https://jamstack.org/). You can find a million things to read about it online. Below is a few components I use in the project
+- **Gatsby** - Static Site Generator
+- **React** - The JS library used to build the underlying pages
+- **Material-UI** - The UI Framework for styling
+- **Netlify** - Website building and hosting

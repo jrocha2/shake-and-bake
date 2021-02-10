@@ -5,6 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "John Bakes",
+    email: "john@cutcopypastry.com",
+    instagram_username: "john.rocha5"
   },
   plugins: [
     "gatsby-plugin-sharp",
@@ -13,7 +15,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Cut, Copy, Pastry",
-        icon: "static/images/icon.png",
+        icon: "static/images/page-icon.png",
       },
     },
     "gatsby-transformer-sharp",
@@ -24,6 +26,12 @@ module.exports = {
         path: "./static/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        include: "/svg/"
+      }
     },
     {
       resolve: `gatsby-source-instagram`,
