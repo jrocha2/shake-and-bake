@@ -6,12 +6,14 @@ import EmailIcon from '@material-ui/icons/Email';
 
 export default function HeaderBar() {
 
-    const siteData = useStaticQuery(
+    const data = useStaticQuery(
         graphql`
             query {
                 site {
                     siteMetadata {
                         title
+                        email
+                        instagram_username
                     }
                 }
             }
@@ -22,7 +24,7 @@ export default function HeaderBar() {
             <AppBar position="sticky" color="primary">
                 <Toolbar>
                 <Typography variant="h6" noWrap style={{ flexGrow: .95 }}>
-                    {siteData.site.siteMetadata.title}
+                    {data.site.siteMetadata.title}
                 </Typography>
                 <ButtonGroup variant="text" style={{ flexGrow: 1 }} color="secondary">
                     <Link to="/">
@@ -32,10 +34,10 @@ export default function HeaderBar() {
                     <Button color="secondary">About</Button>
                     </Link>
                 </ButtonGroup>
-                <IconButton color="inherit" target="_blank" href="http://www.instagram.com/john.rocha5">
+                <IconButton color="inherit" target="_blank" href={"http://www.instagram.com/" + data.site.siteMetadata.instagram_username}>
                     <InstagramIcon />
                 </IconButton>
-                <IconButton edge="end" color="inherit" href="mailto:john.rocha5@gmail.com">
+                <IconButton edge="end" color="inherit" href={"mailto:" + data.site.siteMetadata.email}>
                     <EmailIcon />
                 </IconButton>
                 </Toolbar>
