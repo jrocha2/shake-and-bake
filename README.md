@@ -2,7 +2,7 @@
   🍰 Cut Copy Pastry 🍰
 </h1>
 <p align="center">
-  <a href="https://cutcopypastry.com">
+  <a href="https://cutcopypastry.com" target="_blank" rel="noopener noreferrer">
     cutcopypastry.com
   </a>
 </p>
