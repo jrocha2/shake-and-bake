@@ -5,4 +5,5 @@ export const excludeImages = [
     "B0j6kxsntlA", // BF CC
     "CMA0egInIJ3", // Karbach
     "CQgTxdcHSRO", // J+K
+    "CT2x9XivRMJ", // CA
 ]
