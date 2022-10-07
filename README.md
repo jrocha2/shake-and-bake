@@ -1,27 +1,27 @@
-<h1 align="center">
-  🍰 Cut Copy Pastry 🍰
-</h1>
-<p align="center">
-  <a href="https://cutcopypastry.com" target="_blank" rel="noopener noreferrer">
-    cutcopypastry.com
-  </a>
-</p>
+# ShakeAndBake
 
-<br/>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
-This is the source code for my personal baking and cooking website. 
+## Development server
 
-<br/>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e6faed3f-ef0f-4e28-90a1-f8ff5b3bce94/deploy-status)](https://app.netlify.com/sites/john-bakes/deploys)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-<br/>
+## Build
 
-## The Source Code
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Since the website is mostly meant to serve static content (pictures or recipes), I thought I would try out a static site generator and the [Jamstack](https://jamstack.org/). You can find a million things to read about it online. Below is a few components I use in the project
-- **Gatsby** - Static Site Generator
-- **React** - The JS library used to build the underlying pages
-- **Material-UI** - The UI Framework for styling
-- **Netlify** - Website building and hosting
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
