@@ -6,4 +6,7 @@ export const excludeImages = [
     "CMA0egInIJ3", // Karbach
     "CQgTxdcHSRO", // J+K
     "CT2x9XivRMJ", // CA
+    "Cr4PypurbbE", // NZ
+    "Cqb48NPNVUA", // Sunglasses
+    "CkO3wcsPyxR" // NY
 ]
