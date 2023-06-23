@@ -1,5 +1,5 @@
 [build]
-  command = "sed -i \"s|SECRET_REDIRECT_PATH|${PROD_REDIRECT_PATH}|g\" netlify.toml && "sed -i \"s|SECRET_REDIRECT_DESTINATION|${PROD_REDIRECT_DESTINATION}|g\" && npm run build"
+  command = "sed -i \"s|SECRET_REDIRECT_PATH|${PROD_REDIRECT_PATH}|g\" netlify.toml && sed -i \"s|SECRET_REDIRECT_DESTINATION|${PROD_REDIRECT_DESTINATION}|g\" && npm run build"
 
 [[redirects]]
   from = "SECRET_REDIRECT_PATH"
